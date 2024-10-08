@@ -14,6 +14,10 @@ const Homepage = () => {
   //   const result=await
 
   function AddCartUpdate(listid, newtitle, newImage, newPrice) {
+    if (!listid || !newtitle || !newImage || !newPrice) {
+      console.warn("Incomplete item data passed to AddCartUpdate");
+      return; // Skip if any required data is missing
+    }
     setId(listid)
     setTitle(newtitle)
     setImage(newImage)
