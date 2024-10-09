@@ -60,8 +60,8 @@ const Homepage = () => {
 
 
       <Addcart price={price} id={id} image={image} title={title} />
-      <div className='flex justify-center relative'>
-        <div className='grid sm:grid-cols-4 gird-cols-1 gap-12 place-content-center'>
+      <div className='flex justify-center relative z-0'>
+        <div className='grid sm:grid-cols-4 gird-cols-1 gap-12 place-content-center '>
 
           {data.map((list, index) => (
 
@@ -78,9 +78,11 @@ const Homepage = () => {
               <div className='flex justify-center'>
                 {/* // add to cart button here*/}
                 <button onClick={() => {
+
+
                   AddCartUpdate(list.id, list.title, list.image, list.price,);
                 }}
-                  className='w-40 h-8 bg-yellow-400 rounded-lg active:bg-white active:text-yellow-500'>ADD TO CART</button>
+                  className='w-40 h-8 bg-yellow-400 rounded-lg active:bg-white active:text-yellow-500 cursor-pointer'>ADD TO CART</button>
               </div>
             </div>
 
